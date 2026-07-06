@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+.navbar {
+    background: #0f1729 !important;
+}
+
+.orange {
+    color: #f97015 !important;
+}
+
+.navbar-brand {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.nav-item {
+    width: 150px;
+    text-align: center;
+}
+
+.nav-item a:hover {
+    background: rgba(222, 226, 230, 0.345);
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.perfil a {
+    font-size: 22px;
+    color: #d1d5db;
+}
+
+.title {
+    margin-top: 5%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bolder;
+}
+
+.subtitle {
+    font-weight: normal;
+    font-size: 20px;
+    color: #65758b;
+}
+
+.pesquisa {
+    position: relative;
+}
+
+.pesquisa i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+    pointer-events: none;
+    color: #6c757d;
+
+}
+
+.pesquisa input {
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.pesquisa input,
+.filtro-btn {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #f1f5f9;
+}
+
+.pesquisa input::placeholder {
+    color: #6c757d;
+}
+
+.pesquisa input:focus {
+    outline: none;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.btn-group {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.filtro-btn {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: #6c757d;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar-nav {
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: left;
+    }
+
+}
