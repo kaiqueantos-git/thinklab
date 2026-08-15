@@ -37,7 +37,7 @@ create table artigo_pesquisador(
 create table arquivo(
 	id int primary key auto_increment,
     tipo varchar(50) not null,
-    artigo_id int not null,
+    artigo_id int not null
 ); 
 
 create table categoria(
@@ -67,7 +67,7 @@ AlTER TABLE arquivo DROP COLUMN artigo_id;
 
 ALTER TABLE artigo ADD arquivo_id int;
 ALTER TABLE artigo ADD CONSTRAINT arquivo_id FOREIGN KEY (arquivo_id) REFERENCES arquivo(id);
-ALTER TABLE favorito ADD quantidade_favoritos int;
+ALTER TABLE artigo ADD quantidade_favoritos int;
 
 /*
 create table palavra_chave(
