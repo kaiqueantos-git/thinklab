@@ -1,7 +1,13 @@
+<?php 
+$mysql = new mysqli("localhost", "root", "", "ScholarBase", "3306");
+
+$rs = $mysql->query("SELECT * FROM artigo ORDER BY data_publicacao DESC LIMIT 3");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
@@ -22,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item ">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="Index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Artigos</a>
+                        <a class="nav-link " href="artigo.php">Artigos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre nós</a>
+                        <a class="nav-link" href="sobreNos.php">Sobre nós</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contato</a>
@@ -51,19 +57,18 @@
         <!-- <div class="Inicio">
             <img src="Imgs\HomeMicroscopio.png" alt="Home">
         </div> -->
-        <div class="texto d-flex flex-column justify-content-center">
-            <h1 class="apres">Inovação na Detecção do <span class="destaque">Trypanosoma cruzi</span></h1>
+         <div class="texto d-flex flex-column justify-content-center">
+            <h1 class="apres1">Inovação na Detecção do <span class="destaque">Trypanosoma cruzi</span></h1>
             <p class="subtitle">Pesquisas avançadas em Visão Computacional aplicada ao diagnóstico automatizado da Doença de Chagas, lideradas pelo Prof. Geovani Martins.</p>
             <div class="row grupo-btn">
                 <div class="col pe-0">
-                    <button href="publicacoes.php" id="btn1H" type="button" class="btn btn-primary"><a class="link1" href="publicacoes.php">Ver publicações</a></button>
+                    <button href="publicacoes.php" id="btn1H" class="btnInicio" type="button" class="btn btn-primary"><a class="link1" href="artigos.php">Ver publicações</a></button>
                 </div>
                 <div class="col">
-                    <button id="btn2H" type="button" class="btn btn-primary"><a class="link1" href="sobreNos.php">Sobre a pesquisa</a></button>
+                    <button id="btn2H" class="btnInicio"type="button" class="btn btn-primary"><a class="link1" href="sobreNos.php">Sobre a pesquisa</a></button>
                 </div>
             </div>
         </div>
-
 
     </div>
 
@@ -71,47 +76,26 @@
         <h1 id="PR">Publicações Recentes</h1>
         <p>Artigos científicos e pesquisas nas áreas de Visão Computacional e Diagnóstico Médico.</p>
         <div class="container">
-            <div class="row">
+            
+                <div class="row">
+                    <?php while ($artigo = $rs->fetch_assoc()) { ?>
                 <div class="col">
 
                     <div class="card" style="width: 25rem;">
                         <img src="Imgs\home1.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Detecção de Anomalias em Imagens Médicas com Aprendizado Profundo </h5>
-                            <p class="card-text">Investigamos a aplicação de técnicas de aprendizado profundo não supervisionado para detecção de anomalias em imagens médicas.</p>
-                            <a href="#" class="linkhome">Ler mais -></a>
+                            <h5 class="card-title"><?php echo $artigo['titulo']; ?></h5>
+                            <p class="card-text"><?php echo $artigo['resumo']; ?></p>
+                           <p class="card-text"> Publicado em:<?php echo date("d/m/Y", strtotime($artigo['data_publicacao'])); ?></p>
+                            <a href="detalheArtigo.php?id=<?php echo $artigo['id']; ?>" class="linkhome">Ler mais -></a>
                         </div>
                     </div>
 
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 25rem;">
-                        <img src="Imgs\home2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Análise de Trajetórias de Microorganismos em Amostras Biológicas </h5>
-                            <p class="card-text">Apresentamos uma abordagem inovadora para análise do comportamento cinemático de microorganismos em amostras biológicas.</p>
-                            <a href="#" class="linkhome">Ler mais -></a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <div class="card" style="width: 25rem;">
-                        <img src="Imgs\home3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Detecção Automática do Trypanosoma cruzi em Imagens de Microscopia usando Redes</h5>
-                            <p class="card-text">Este trabalho propõe um sistema de detecção automática do Trypanosoma cruzi em amostras de sangue </p>
-                            <a href="#" class="linkhome">Ler mais -></a>
-                        </div>
-                    </div>
-
-                </div>
             </div>
+            <?php } ?>
         </div>
     </div>
-
+</div>
 
     <div class="linhasPesq">
         <h1 id="formacaoh">Linhas de Pesquisa</h1>

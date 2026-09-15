@@ -52,7 +52,7 @@ body {
             rgba(255, 255, 255, 0.85) 100%
         ),
         url("Imgs/HomeMicroscopio.png");
-    height: 600px;
+    height: 550px;
     padding-left: 30px;
     padding-right: 10px;
 }
@@ -72,31 +72,53 @@ body {
     color: white;
     text-align: left;
 } */
+ 
 
-.apres {
+.apres1 {
+    position: absolute;
+    top: 20%;
+    right: 45%;
+    left: 2%;
     font-size: 60px;
     font-weight: bold;
     font-family: "Plus Jakarta Sans", sans-serif;
     color: white;
 }
-
+.apres{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+}
 .destaque {
     color: #38bdf8;
 }
 
 .subtitle {
+    position: absolute;
+    top: 45%;
+
     font-weight: normal;
     font-size: 20px;
     color: #65758b;
 }
 
-.btn {
-
+.btnInicio {
+     margin-top: 50%;
     color: rgb(255, 255, 255);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+        border-radius: 6px;
+
+}
+.btn{
+   color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer; 
 }
 
 #btn1H {
@@ -256,4 +278,169 @@ body {
 #link3 {
     color: #000000;
     text-decoration: none;
+}
+
+#detalhes-artigo {
+    width: 80%;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #d5d5d5;
+}
+
+#titulo-artigo {
+    color: #1b2335;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#resumo-artigo {
+    color: #111111;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#data-artigo {
+    color: #65758b;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+#doi-artigo {
+    color: #65758b;
+    font-size: 16px;
+}
+
+#link-artigo {
+    color: #f88e38;
+    text-decoration: none;
+}
+
+#voltar-artigo {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #d4810c;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#img-artigo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+.navbar {
+    background: #0f1729 !important;
+}
+
+.orange {
+    color: #f97015 !important;
+}
+
+.navbar-brand {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.nav-item {
+    width: 150px;
+    text-align: center;
+}
+
+.nav-item a:hover {
+    background: rgba(222, 226, 230, 0.345);
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.perfil a {
+    font-size: 22px;
+    color: #d1d5db;
+}
+
+.title {
+    margin-top: 5%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bolder;
+}
+
+.subtitle {
+    font-weight: normal;
+    font-size: 20px;
+    color: #65758b;
+}
+
+.pesquisa {
+    position: relative;
+}
+
+.pesquisa i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+    pointer-events: none;
+    color: #6c757d;
+
+}
+
+.pesquisa input {
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.pesquisa input,
+.filtro-btn {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #f1f5f9;
+}
+
+.pesquisa input::placeholder {
+    color: #6c757d;
+}
+
+.pesquisa input:focus {
+    outline: none;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.btn-group {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.filtro-btn {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: #6c757d;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar-nav {
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: left;
+    }
+
 }
