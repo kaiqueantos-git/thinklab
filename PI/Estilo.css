@@ -1,0 +1,259 @@
+/* NavBar */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+.navbar {
+    background: #0f1729 !important;
+}
+
+.orange {
+    color: #f97015 !important;
+}
+
+.navbar-brand {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.nav-item {
+    width: 150px;
+    text-align: center;
+}
+
+.nav-item a:hover {
+    background: rgba(222, 226, 230, 0.345);
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.perfil a {
+    font-size: 22px;
+    color: #d1d5db;
+}
+
+/* Home */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.texto {
+     background-image:
+        linear-gradient(
+            to bottom,
+            rgba(8, 20, 45, 0.75) 0%,
+            rgba(8, 20, 45, 0.55) 40%,
+            rgba(8, 20, 45, 0.65) 70%,
+            rgba(255, 255, 255, 0.85) 100%
+        ),
+        url("Imgs/HomeMicroscopio.png");
+    height: 600px;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+/* .Inicio img {
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+
+.texto {
+    position: absolute;
+    top: 26%;
+    right: 55%;
+    left: 2%;
+
+    color: white;
+    text-align: left;
+} */
+
+.apres {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+}
+
+.destaque {
+    color: #38bdf8;
+}
+
+.subtitle {
+    font-weight: normal;
+    font-size: 20px;
+    color: #65758b;
+}
+
+.btn {
+
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn1H {
+    background-color: #d4810c;
+}
+
+#btn2H {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+}
+
+.grupo-btn {
+    width: 30%;
+}
+
+
+
+.coluna {
+    border: 1px solid white;
+}
+
+.publicacoesInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#PR {
+    color: black;
+}
+
+/* SobreNós */
+
+
+.fundoSobre {
+    width: 100%;
+    height: 250px;
+    display: block;
+    background-color: #1b2335;
+}
+
+.inicioSobre {
+    color: white;
+    position: absolute;
+    top: 13%;
+    right: 50%;
+    left: 8%;
+}
+
+.sobreContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 100px;
+    margin-left: 8%;
+
+}
+
+.SobreProf {
+    flex: 1.5;
+    color: black;
+    text-align: left;
+}
+
+
+.SobreProfImg {
+    flex: 1;
+}
+
+.SobreProfImg img {
+    width: 100%;
+    height: 100;
+    border-radius: 12px;
+}
+
+.fundo2 {
+    width: 100%;
+    background-color: #ebebeb;
+    padding: 60px 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 24px auto;
+}
+
+.card-icon {
+    background-color: #dbeeff;
+    color: #3b9ee8;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+}
+
+#formacao {
+    text-align: center;
+    font-weight: bold;
+}
+
+#pcentro {
+    text-align: center;
+}
+
+.rodape {
+    background-color: #1b2335;
+    color: white;
+    padding: 20px 0;
+    text-align: left;
+
+}
+
+.linkhome {
+    color: #f88e38;
+    text-decoration: none;
+}
+
+.linhasPesq {
+    background-color: #1b2335;
+}
+
+#formacaoh {
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.link1 {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#btn3H {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+
+}
+
+#link3 {
+    color: #000000;
+    text-decoration: none;
+}
