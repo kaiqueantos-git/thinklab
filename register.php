@@ -19,6 +19,8 @@
             $senha = password_hash($senha, PASSWORD_DEFAULT);
 
             $mysql->query("INSERT INTO usuario(email, nome, senha) VALUES('$email', '$nome', '$senha')");
+            header("Location: login.php");
+            exit;
         }
     }
 ?>

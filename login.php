@@ -91,7 +91,6 @@
                         <div class="mb-4">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <label class="form-label text-secondary small fw-semibold mb-0">Senha</label>
-                                <a href="esqueci_senha.php" class="text-decoration-none small text-primary">Esqueceu a senha?</a>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text bg-light border-end-0 text-muted">
