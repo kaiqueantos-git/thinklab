@@ -7,8 +7,12 @@
         $senha = $_POST["senha"];
         $confirm_senha = $_POST["confirm_senha"];
 
+        $rs = $mysql->query("SELECT * FROM usuario WHERE email='$email'");
+
         if (empty($nome) || empty($email) || empty($senha) || empty($confirm_senha)) {
             $mensagem_erro = "Preencha todos os campos!";
+        } elseif ($rs->num_rows > 0) {
+            $mensagem_erro = "Esse email já está cadastrado. Tente realizar login!";
         } elseif ($senha !== $confirm_senha) {
             $mensagem_erro = "As senhas são diferentes! Tente novamente.";
         } else {
@@ -62,7 +66,7 @@
                             <span class="input-group-text bg-light border-end-0 text-muted">
                                 <i class="bi bi-envelope"></i>
                             </span>
-                            <input type="text" name="email" class="form-control bg-light border-start-0 py-2 text-muted" placeholder="seu   @exemplo.com">
+                            <input type="text" name="email" class="form-control bg-light border-start-0 py-2 text-muted" placeholder="seu@exemplo.com">
                         </div>
                     </div>
 

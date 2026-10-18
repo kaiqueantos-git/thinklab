@@ -1,7 +1,28 @@
 <?php
     $mysql = new mysqli("localhost", "root", "", "scholarbase", 3306);
 
-    // tem que fazer a lógica toda, última anotação do laerte ele fala
+    session_start();
+
+    if (sizeof($_POST) > 0) {
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
+
+        $rs = $mysql->query("SELECT * FROM usuario WHERE email='$email'");
+
+        if ($rs->num_rows > 0) {
+            $usuario = $rs->fetch_assoc();
+
+            if (password_verify($senha, $usuario["senha"])) {
+                $_SESSION["usr"] = $usuario;
+                header("Location: index.php");
+                exit;
+            } else {
+                $erro = "Senha incorreta";
+            }
+        } else {
+            $erro = "Usuário não identificado";
+        }
+    }
 ?>
 
 <html>
@@ -48,20 +69,28 @@
                         <p class="text-muted small">Não tem conta? <a href="register.php" class="text-decoration-none text-primary fw-medium">Criar conta</a></p>
                     </div>
 
+                <?php if (!empty($erro)): ?>
+                    <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        <?php echo $erro; ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php endif; ?>
+
                     <form method="post" action="login.php">
                         <div class="mb-3">  
-                            <label for="email" class="form-label text-secondary small fw-semibold">E-mail</label>
+                            <label class="form-label text-secondary small fw-semibold">E-mail</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-light border-end-0 text-muted">
                                     <i class="bi bi-envelope"></i>
                                 </span>
-                                <input type="email" name="email" class="form-control bg-light border-start-0 py-2 text-muted" placeholder="seu@email.com">
+                                <input type="text" name="email" class="form-control bg-light border-start-0 py-2 text-muted" placeholder="seu@email.com">
                             </div>
                         </div>
 
                         <div class="mb-4">
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <label for="senha" class="form-label text-secondary small fw-semibold mb-0">Senha</label>
+                                <label class="form-label text-secondary small fw-semibold mb-0">Senha</label>
                                 <a href="esqueci_senha.php" class="text-decoration-none small text-primary">Esqueceu a senha?</a>
                             </div>
                             <div class="input-group">
