@@ -46,7 +46,7 @@ $rs = $mysql->query("SELECT * FROM artigo ORDER BY data_publicacao DESC LIMIT 3"
                     </li>
                 </ul>
                 <div class="perfil ms-auto d-none d-lg-block">
-                    <a href="#">
+                    <a href="perfil.php">
                         <i class="bi bi-person-circle"></i>
                     </a>
                 </div>

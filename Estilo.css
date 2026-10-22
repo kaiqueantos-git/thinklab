@@ -444,19 +444,9 @@ body {
 
 }
 
-/* login */
-.bg-imagem-fundo {
-    background-image: url('background-login.jpg');
-    background-size: cover;
-    background-position: center;
-}
 
-.button-login {
-    background-color: #f76822;
-}
 
-.tamanho-div {
-    max-width: 420px;
+
 =======
 /* NavBar */
 
